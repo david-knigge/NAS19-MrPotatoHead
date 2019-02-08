@@ -65,12 +65,12 @@ public class MainActivity extends AppCompatActivity {
 
     /*
      * Called when any checkbox is clicked. Finds ImageView corresponding to this checkbox and sets
-     * visibilty value based on whether or not the checkbox is checked.
+     * visibility value based on whether or not the checkbox is checked.
      */
     public void checkClicked(View v) {
         CheckBox checkbox = (CheckBox) v;
 
-        String item = checkbox.getText().toString();
+        String item = checkbox.getTag().toString();
 
         int rID = getResources().getIdentifier(
                 "imageView" + item,
